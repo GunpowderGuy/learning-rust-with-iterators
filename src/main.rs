@@ -14,3 +14,7 @@ fn factor(n:i64) ->i64 {
 fn numeroPerfecto(n:i64) -> bool {
     n == (1..n).filter(|x|n%x == 0).fold(0,|x,y|x+y)
 }
+
+fn SepararPalabras (cadena : String ) -> Vec<String>{
+    cadena.split(" ").collect()
+}
