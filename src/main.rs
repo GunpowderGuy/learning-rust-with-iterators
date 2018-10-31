@@ -1,13 +1,14 @@
 fn main() {
     println!("Hello, world!");
-    println!("{}",numeroPerfecto(8128))
-}
+    println!("{}",numeroPerfecto(8128));
+    println!("{}",CuentaPalabras("uno  dos      tres"));
+    }
 
-fn factorial(n : i64) -> i64 {
+fn factorial(n : usize) -> usize {
     (1..n+1).fold(1,|x,y|x*y)
 }
 
-fn factor(n:i64) ->i64 {
+fn factor(n:usize) -> usize {
     (1..n+1).map(factorial).fold(0,|x,y|x+y)
 }
 
@@ -15,6 +16,10 @@ fn numeroPerfecto(n:i64) -> bool {
     n == (1..n).filter(|x|n%x == 0).fold(0,|x,y|x+y)
 }
 
-fn SepararPalabras (cadena : String ) -> Vec<String>{
-    cadena.split(" ").collect()
+fn SepararPalabras (cadena : &str ) -> Vec<&str> {
+    cadena.split(" ").filter(|x| x != &"" ).collect()
+}
+
+fn CuentaPalabras (cadena : &str) -> usize {
+    SepararPalabras(cadena).len()
 }
