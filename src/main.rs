@@ -2,6 +2,7 @@ fn main() {
     println!("Hello, world!");
     println!("{}",numeroPerfecto(8128));
     println!("{}",CuentaPalabras("uno  dos      tres"));
+    println!("{}", OtrosCaracteres("uno1  2"))
     }
 
 fn factorial(n : usize) -> usize {
@@ -18,6 +19,10 @@ fn numeroPerfecto(n:i64) -> bool {
 
 fn SepararPalabras (cadena : &str ) -> Vec<&str> {
     cadena.split(" ").filter(|x| x != &"" ).collect()
+}
+
+fn OtrosCaracteres (cadena : &str ) -> usize {
+    SepararPalabras(cadena).join("").len()
 }
 
 fn CuentaPalabras (cadena : &str) -> usize {
