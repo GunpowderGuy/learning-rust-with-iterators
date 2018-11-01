@@ -14,10 +14,8 @@ fn OtrosCaracteres (cadena : String ) -> usize {
 }
 
 fn OtrosCaracteres2 (cadena : String ) -> usize {
-    NoEspacioRedundante(cadena).into_bytes().into_iter().filter(|x| x != &9 ).collect().len()
+    cadena[0..cadena.len()].into_iter().filter(|x| x != &" " ).collect().len()
 }
-
-
 
 fn CuentaPalabras (cadena : String ) -> usize {
     let out : Vec<char> = NoEspacioRedundante(cadena).chars().into_iter().filter(|x| x !=  &' ').collect();
