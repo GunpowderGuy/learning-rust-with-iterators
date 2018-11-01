@@ -4,7 +4,11 @@ version = "0.1.0"
 authors = ["diegor8 <diegorosario2014@gmail.com>"]
 
 [[bin]]
+name = "main"
+path = "src/main.rs"
+
+[[bin]]
 name = "semana9"
-path = "src/semana9/semana9"
+path = "src/semana9.rs"
 
 [dependencies]
