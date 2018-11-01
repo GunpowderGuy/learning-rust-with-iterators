@@ -5,6 +5,6 @@ authors = ["diegor8 <diegorosario2014@gmail.com>"]
 
 [[bin]]
 name = "semana9"
-path = "src/semana9/main.rs"
+path = "src/semana9/semana9"
 
 [dependencies]
